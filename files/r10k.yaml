@@ -2,5 +2,5 @@
 :cachedir: /var/cache/r10k
 :sources:
   :local:
-    remote: https://github.com/djsd123/dynamic
+    remote: https://github.com/djsd123/bugfree-robot
     basedir: /etc/puppet/environments
