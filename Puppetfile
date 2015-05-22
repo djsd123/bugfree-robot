@@ -10,6 +10,7 @@ mod 'maestrodev/wget',                 '1.7.0'
 mod 'puppetlabs/concat',               '2.0.0'
 mod 'jhoblitt/selenium',               '0.3.0'
 mod 'p0deje/display',                  '0.3.1'
+mod 'stankevich/python'                '1.9.4'
 
 
 # Dependencies only
