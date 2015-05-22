@@ -7,7 +7,7 @@ mod 'elasticsearch/elasticsearch',     '0.9.5'
 mod 'rtyler/jenkins',                  '1.4.0'
 mod 'jfryman/selinux',                 '0.2.3'
 mod 'maestrodev/wget',                 '1.7.0'
-mod 'puppetlabs/concat                 '2.0.0'
+mod 'puppetlabs/concat',               '2.0.0'
 
 
 # Dependencies only
