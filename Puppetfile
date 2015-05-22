@@ -8,6 +8,8 @@ mod 'rtyler/jenkins',                  '1.4.0'
 mod 'jfryman/selinux',                 '0.2.3'
 mod 'maestrodev/wget',                 '1.7.0'
 mod 'puppetlabs/concat',               '2.0.0'
+mod 'jhoblitt/selenium',               '0.3.0'
+mod 'p0deje/display',                  '0.3.1'
 
 
 # Dependencies only
@@ -16,4 +18,5 @@ mod 'puppetlabs/vcsrepo',              '1.2.0'
 mod 'puppetlabs/java',                 '1.3.0'
 mod 'puppetlabs/inifile',              '1.2.0'
 mod 'nanliu/staging',                  '1.0.3'
+mod 'rodjek/logrotate',                '1.1.1'
 
