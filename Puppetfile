@@ -14,6 +14,6 @@ mod 'puppetlabs/concat                 '2.0.0'
 mod 'puppetlabs/stdlib',               '4.5.1'
 mod 'puppetlabs/vcsrepo',              '1.2.0'
 mod 'puppetlabs/java',                 '1.3.0'
-mod 'puppetlabs/inifile                '1.2.0'
+mod 'puppetlabs/inifile',              '1.2.0'
 mod 'nanliu/staging',                  '1.0.3'
 
