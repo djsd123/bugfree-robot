@@ -1,0 +1,14 @@
+{
+  "name": "djsd123-profiles",
+  "version": "0.1.0",
+  "author": "djsd123",
+  "summary": "boiler plate to implement profiles design pattern",
+  "license": "Apache-2.0",
+  "source": "https://github.com/djsd123/bugfree-robot",
+  "project_page": "https://github.com/djsd123/bugfree-robot",
+  "issues_url": "https://github.com/djsd123/bugfree-robot/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
