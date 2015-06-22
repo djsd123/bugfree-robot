@@ -1,5 +1,5 @@
-class role::aws {
+class roles::aws {
   include ::profiles::ntp
-  include ::profiles::python
+  include ::profiles::python_tools
   include ::profiles::packages
 }
