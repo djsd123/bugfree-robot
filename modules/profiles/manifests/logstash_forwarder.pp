@@ -1,6 +1,5 @@
 class profiles::logstash_forwarder {
 
-  $app_log       = hiera('app_log')
   $app           = hiera('app')
   $servers       = hiera('servers')
   $ssl_ca        = hiera('ssl_ca')
@@ -13,7 +12,7 @@ class profiles::logstash_forwarder {
   }
 
   logstashforwarder::file { $app :
-    paths  => [ "/var/log/applications/$app_log" ],
+    paths  => [ "/var/log/applications/${app}.log" ],
     fields => { 'type' => $app },
   }
 
