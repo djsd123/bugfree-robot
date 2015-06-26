@@ -32,6 +32,17 @@ class profiles::python_tools {
     target => '/usr/local/bin/pip3',
   }
 
+  package {'gunicorn' :
+    ensure   => installed,
+    provider => pip3,
+    require  => File['/usr/bin/pip3']
+  }
+
+  package {['flask','virtualenv','virtualenvwrapper'] :
+    ensure   => installed,
+    provider => pip3,
+    require  => File['/usr/bin/pip3']
+  }
 
 
 }
