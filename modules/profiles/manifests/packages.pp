@@ -14,4 +14,9 @@ class profiles::packages {
 
  ensure_packages($PKGLIST)
 
+  package {['bundler','rake']:
+    ensure   => installed,
+    provider => gem
+  }
+
 }
