@@ -1,6 +1,5 @@
 class profiles::logstash_forwarder {
 
-  $logstash_file = hiera('logstash_file')
   $app_log       = hiera('app_log')
   $app           = hiera('app')
   $servers       = hiera('servers')
@@ -13,9 +12,17 @@ class profiles::logstash_forwarder {
     ssl_ca      => $ssl_ca,
   }
 
-  logstashforwarder::file { $logstash_file :
+  logstashforwarder::file { $app :
     paths  => [ "/var/log/applications/$app_log" ],
     fields => { 'type' => $app },
+  }
+
+  file { '/etc/pki/tls/certs/logstash-forwarder.crt':
+    ensure => file,
+    source => "puppet:///modules/profiles/logstash-forwarder.crt",
+    mode   => '644',
+    owner  => 'logstashforwarder',
+    group  => 'logstashforwarder',
   }
 
 }
