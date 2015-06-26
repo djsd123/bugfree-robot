@@ -8,7 +8,7 @@ class profiles::packages {
    'ruby','rubygems','java-1.7.0-openjdk','java-1.7.0-openjdk-devel',
    'binutils','bison','flex','gettext','libtool','make','patch','pkgconfig',
    'redhat-rpm-config','rpm-build','rpm-sign','libxml2','libxslt',
-   'libxml2-devel','psmisc']
+   'libxml2-devel','psmisc','ruby-devel']
 
 
 
