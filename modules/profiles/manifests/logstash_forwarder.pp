@@ -6,7 +6,7 @@ class profiles::logstash_forwarder {
 
   class { 'logstashforwarder':
     manage_repo => true,
-    servers     => $servers,
+    servers     => [ $servers],
     timeout     => '15',
     ssl_ca      => $ssl_ca,
   }
@@ -14,14 +14,6 @@ class profiles::logstash_forwarder {
   logstashforwarder::file { $app :
     paths  => [ "/var/log/applications/${app}.log" ],
     fields => { 'type' => $app },
-  }
-
-  file { '/etc/pki/tls/certs/logstash-forwarder.crt':
-    ensure => file,
-    source => "puppet:///modules/profiles/logstash-forwarder.crt",
-    mode   => '644',
-    owner  => 'logstashforwarder',
-    group  => 'logstashforwarder',
   }
 
 }
