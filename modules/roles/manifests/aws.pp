@@ -3,4 +3,5 @@ class roles::aws {
   include ::profiles::python_tools
   include ::profiles::packages
   include ::profiles::users
+  include ::profiles::logstash_forwarder
 }
