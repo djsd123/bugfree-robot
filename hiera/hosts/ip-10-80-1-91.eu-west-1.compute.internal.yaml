@@ -1,0 +1,9 @@
+---
+# Reverse Proxy (nginx)
+server_name: "digital.puppet.beta.landregistryconcept.co.uk"
+sslcrt:      '/usr/share/nginx/ssl1.pem'
+sslkey:      '/usr/share/nginx/ssl.pem'
+proxy_pass:  "http://127.0.0.1:8000"
+
+# Logstash Forwarder
+app:           'digital-register-frontend'
