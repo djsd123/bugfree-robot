@@ -4,4 +4,5 @@ class roles::aws {
   include ::profiles::packages
   include ::profiles::users
   include ::profiles::logstash_forwarder
+  include ::profiles::log_rotation
 }
