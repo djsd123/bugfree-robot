@@ -2,7 +2,7 @@ class profiles::log_rotation {
 
   $app    = hiera('app')
 
-  logrotate::rule { '$app':
+  logrotate::rule { $app:
     path         => "/var/log/applications/${app}.log",
     rotate       => 10,
     rotate_every => 'day',
