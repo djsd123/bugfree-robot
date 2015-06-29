@@ -3,5 +3,30 @@
 servers: '192.168.1.163:5000'
 ssl_ca:  "puppet:///modules/profiles/logstash-forwarder.crt"
 
-#Selenium Hub
+#Selenium Hub Placeholder "When you provision a hub.  Change the below"
 hub:     'http://<myseleniumhub>:4444/grid/register'
+
+hosts::host_entries:
+  'loginapi.integration.beta.landregistryconcept.co.uk':
+    ip: '10.80.2.102'
+    host_aliases:
+      - 'login-api'
+  'digitalapi.integration.beta.landregistryconcept.co.uk':
+    ip: '10.80.2.127'
+    host_aliases:
+      - 'digital-api'
+  'digital.integration.beta.landregistryconcept.co.uk':
+    ip: '10.80.1.91'
+    host_aliases:
+      - 'digital-frontend'
+  'elasticsearch':
+    ip: '10.80.2.46'
+  'elasticsearch-updater':
+    ip: '10.80.2.46'
+    host_alisaes:
+      - 'es-updater'
+  'postgres':
+    ip: '10.80.2.10'
+    host_aliases:
+      - 'db'
+      - 'database'
