@@ -17,4 +17,12 @@ class profiles::users {
       group   => 'root',
       mode    => '0644';
   }
+
+  file { '/var/webapp/.ssh/authorized_keys':
+    ensure  => file,
+    source  => 'puppet:///modules/profiles/authorized_keys',
+    owner   => 'webapp',
+    group   => 'webapp',
+    mode    => 644,
+  }
 }
