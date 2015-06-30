@@ -25,7 +25,7 @@ class profiles::users {
     owner   => 'webapp',
     group   => 'webapp',
     mode    => 700,
-  }
+  } ~>
 
   file { '/var/webapp/.ssh/authorized_keys':
     ensure  => file,
