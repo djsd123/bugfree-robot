@@ -14,6 +14,7 @@ mod 'jhoblitt/selenium',               '0.3.0'
 mod 'p0deje/display',                  '0.3.1'
 mod 'stankevich/python',               '1.9.4'
 mod 'ghoneycutt/hosts',                '2.2.3'
+mod 'echoes/monit',                    '0.5.0'
 
 
 # Dependencies only

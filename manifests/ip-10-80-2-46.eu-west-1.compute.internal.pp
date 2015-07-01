@@ -17,6 +17,7 @@ node 'ip-10-80-2-46.eu-west-1.compute.internal' {
     create       => true,
     create_owner => 'webapp',
     create_group => 'webapp',
+    create_mode  => 755,
     compress     => true,
   }
 }
