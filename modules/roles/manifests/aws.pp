@@ -7,4 +7,5 @@ class roles::aws {
   include ::profiles::log_rotation
   include ::profiles::se_linux
   include ::profiles::monit_service
+  include ::profiles::sudoers
 }
