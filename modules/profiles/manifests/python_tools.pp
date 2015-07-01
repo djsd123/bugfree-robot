@@ -41,7 +41,7 @@ class profiles::python_tools {
   package {['flask','virtualenv','virtualenvwrapper'] :
     ensure   => installed,
     provider => pip3,
-    require  => File['/usr/bin/pip3']
+    require  => File['/usr/bin/pip3'],
   }
 
 
