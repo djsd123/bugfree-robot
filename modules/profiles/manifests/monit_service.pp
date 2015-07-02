@@ -6,7 +6,7 @@ class profiles::monit_service{
     content => 'check process gunicorn with pidfile /tmp/gunicorn.pid
     start program = "/var/webapp/env_up"
     as uid webapp and gid webapp
-    stop program = "/bin/pkill -9 python"
+    stop program = "/bin/pkill -9 gunicron"
     if failed host localhost port 8000 protocol http then restart',
   }
 
