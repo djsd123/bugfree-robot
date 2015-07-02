@@ -1,4 +1,7 @@
 class profiles::users {
+
+# Should probably rename this profile to webapp. This profile was originally just for users but had to throw in numerous
+# hacks to get the apps working. Packaging and deployment solution desperately required. :-(
   
   $webapp_dirs = ["/var/webapp/.ssh","/var/webapp/workspace","/var/log/applications"]
 

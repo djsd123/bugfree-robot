@@ -38,7 +38,7 @@ class profiles::python_tools {
     require  => File['/usr/bin/pip3']
   }
 
-  package {['flask','virtualenv','virtualenvwrapper'] :
+  package {['flask','virtualenv','virtualenvwrapper','python-coveralls','pep8'] :
     ensure   => installed,
     provider => pip,
     require  => File['/usr/bin/pip3'],
