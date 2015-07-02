@@ -1,6 +1,6 @@
 class profiles::users {
   
-  $webapp_dirs = ["/var/webapp/.ssh","/var/webapp/workspace"]
+  $webapp_dirs = ["/var/webapp/.ssh","/var/webapp/workspace","/var/log/applications"]
 
   user {
     'webapp':
