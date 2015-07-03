@@ -37,5 +37,12 @@ class profiles::users {
     group   => 'webapp',
     mode    => 644,
   }
+
+  file { '/var/webapp/.bash_profile':
+    ensure => file,
+    owner => 'webapp',
+    group => 'webapp',
+    source => "puppet:///modules/profiles/.bash_profile",
+  }
   
 }
