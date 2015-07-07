@@ -20,6 +20,7 @@ class profiles::python_tools2 {
     provider => rpm,
     source   => "/tmp/${setuptools}",
     ensure   => installed,
+    install_options => '--nosignature',
   }
 
   file { $libs :
@@ -32,6 +33,7 @@ class profiles::python_tools2 {
     provider => rpm,
     source   => "/tmp/${libs}",
     ensure   => installed,
+    install_options => '--nosignature',
   }
 
   file { $python3 :
@@ -44,6 +46,7 @@ class profiles::python_tools2 {
     provider => rpm,
     source   => "/tmp/${python3}",
     ensure   => installed,
+    install_options => '--nosignature',
     require  => Package[$libs],
   }
 
@@ -57,6 +60,7 @@ class profiles::python_tools2 {
     provider => rpm,
     source   => "/tmp/${pip}",
     ensure   => installed,
+    install_options => '--nosignature',
     require  => Package[$setuptools],
   }
 
@@ -70,6 +74,7 @@ class profiles::python_tools2 {
     provider => rpm,
     source   => "/tmp/${gunicorn}",
     ensure   => installed,
+    install_options => '--nosignature',
     require  => Package[$python3],
   }
 
