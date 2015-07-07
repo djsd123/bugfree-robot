@@ -17,7 +17,7 @@ class profiles::python_tools2 {
   } ~>
 
   package { $setuptools :
-    provider => rpm,
+    provider => yum,
     source   => "/tmp/${setuptools}",
     ensure   => installed,
   }
@@ -29,7 +29,7 @@ class profiles::python_tools2 {
   } ~>
 
   package { $libs :
-    provider => rpm,
+    provider => yum,
     source   => "/tmp/${libs}",
     ensure   => installed,
   }
@@ -41,7 +41,7 @@ class profiles::python_tools2 {
   } ~>
 
   package { $python3 :
-    provider => rpm,
+    provider => yum,
     source   => "/tmp/${python3}",
     ensure   => installed,
     require  => Package[$libs],
@@ -54,7 +54,7 @@ class profiles::python_tools2 {
   } ~>
 
   package { $pip :
-    provider => rpm,
+    provider => yum,
     source   => "/tmp/${pip}",
     ensure   => installed,
     require  => Package[$setuptools],
@@ -67,7 +67,7 @@ class profiles::python_tools2 {
   } ~>
 
   package { $gunicorn :
-    provider => rpm,
+    provider => yum,
     source   => "/tmp/${gunicorn}",
     ensure   => installed,
     require  => Package[$python3],
