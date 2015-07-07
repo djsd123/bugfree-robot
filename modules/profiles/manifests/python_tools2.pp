@@ -1,7 +1,7 @@
 class profiles::python_tools2 {
 
 # Very ugly approach, I know.  I am experimenting with using python packages system wide as opposed to virtualenvs
-# which are not relocatable
+# which are not relocatable.
 
   $rpm_path   =  "puppet:///modules/profiles"
   $gunicorn   =  "python3-gunicorn-18.0-1.fc20.noarch.rpm"
