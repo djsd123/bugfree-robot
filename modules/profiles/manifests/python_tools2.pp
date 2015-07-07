@@ -7,33 +7,33 @@ class profiles::python_tools2 {
   $setuptools =  "python3-setuptools-1.4.2-1.fc20.noarch.rpm"
   $libs       =  "python3-libs-3.3.2-19.fc20.x86_64.rpm"
 
-  package { 'setuptools':
+  package { $setuptools :
     provider => rpm,
     source   => "${rpm_path}/${setuptools}",
     ensure   => installed,
   }
 
-  package { 'libs':
+  package { $libs :
     provider => rpm,
     source   => "${rpm_path}/${libs}",
     ensure   => installed,
   }
 
-  package { 'python3':
+  package { $python3 :
     provider => rpm,
     source   => "${rpm_path}/${python3}",
     ensure   => installed,
     require  => Package['libs'],
   }
 
-  package { 'pip':
+  package { $pip :
     provider => rpm,
     source   => "${rpm_path}/${pip}",
     ensure   => installed,
     require  => Package['setuptools'],
   }
 
-  package { 'gunicorn':
+  package { $gunicorn :
     provider => rpm,
     source   => "${rpm_path}/${gunicorn}",
     ensure   => installed,
