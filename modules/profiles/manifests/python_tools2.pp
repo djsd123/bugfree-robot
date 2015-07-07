@@ -1,5 +1,8 @@
 class profiles::python_tools2 {
 
+# Very bad approach, I know.  I am experimenting with using python packages system wide as opposed to virtualenvs
+# which are not relocatable
+
   $rpm_path   =  "puppet:///modules/profiles/files"
   $gunicorn   =  "python3-gunicorn-18.0-1.fc20.noarch.rpm"
   $python3    =  "python3-3.3.2-19.fc20.x86_64.rpm"
@@ -23,21 +26,21 @@ class profiles::python_tools2 {
     provider => rpm,
     source   => "${rpm_path}/${python3}",
     ensure   => installed,
-    require  => Package['libs'],
+    require  => Package[$libs],
   }
 
   package { $pip :
     provider => rpm,
     source   => "${rpm_path}/${pip}",
     ensure   => installed,
-    require  => Package['setuptools'],
+    require  => Package[$setuptools],
   }
 
   package { $gunicorn :
     provider => rpm,
     source   => "${rpm_path}/${gunicorn}",
     ensure   => installed,
-    require  => Package['python3'],
+    require  => Package[$python3],
   }
 
 }
