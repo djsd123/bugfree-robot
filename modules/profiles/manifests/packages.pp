@@ -8,7 +8,9 @@ class profiles::packages {
    'ruby','rubygems','java-1.7.0-openjdk','java-1.7.0-openjdk-devel',
    'binutils','bison','flex','gettext','libtool','make','patch','pkgconfig',
    'redhat-rpm-config','rpm-build','rpm-sign','libxml2','libxslt',
-   'libxml2-devel','psmisc','ruby-devel','finger','git','lsof']
+   'libxml2-devel','psmisc','ruby-devel','finger','git','lsof','openssl-libs',
+   'pyOpenSSL.x86_64','bzip2-devel','bzip2-libs','readline','readline-static',
+   'readline-devel']
 
 
 
