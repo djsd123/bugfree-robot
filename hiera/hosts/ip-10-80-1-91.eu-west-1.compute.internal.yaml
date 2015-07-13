@@ -9,5 +9,5 @@ proxy_pass:  "http://127.0.0.1:8000"
 app:           'digital-register-frontend'
 
 # Environment Variables
-pythpath:      '/var/webapp/workspace/parallel_digital-register-frontend-integration-deploy'
+pypath:      '/var/webapp/workspace/parallel_digital-register-frontend-integration-deploy'
 fault_log:     '/var/log/applications/digital-register-frontend-fault.log'
