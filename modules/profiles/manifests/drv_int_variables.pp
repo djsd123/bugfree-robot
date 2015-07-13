@@ -1,7 +1,7 @@
 class profiles::drv_int_variables {
 
-  $pypath    = hiera(pypath)
-  $fault_log = hiera(fault_log)
+  $pypath    = hiera('pypath')
+  $fault_log = hiera('fault_log')
 
   include systemenv
 
