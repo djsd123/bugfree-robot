@@ -6,7 +6,7 @@ class profiles::env_variables {
   $GOOGLE_ANALYTICS_API_KEY= hiera('google_analytics_api_key')
   $APPLICATION_SECRET_KEY  = hiera('application_secret_key')
   $LOGIN_API               = hiera('login_api')
-  $PYTHONPATH              = hiera('pythonpath')
+#  $PYTHONPATH              = hiera('pythonpath')
 
   file { '/etc/profile.d/environment.sh' :
     ensure  => file,
