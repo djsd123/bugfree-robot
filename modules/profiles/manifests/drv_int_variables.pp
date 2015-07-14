@@ -6,7 +6,7 @@ class profiles::drv_int_variables {
   include systemenv
 
   $environment_variables = {
-    'SETTINGS' => { ensure => present, value => 'prod', },
+    'SETTINGS' => { ensure => present, value => '\'prod\'', },
     'REGISTER_TITLE_API' => { ensuren => present, value => 'http://digitalapi.integration2.beta.landregistryconcept.co.uk',},
     'LOGIN_API' => { ensure => present, value => 'http://loginapi.integration2.beta.landregistryconcept.co.uk',},
     'SESSION_COOKIE_SECURE' => { ensure => present, value => 'true',},

@@ -6,6 +6,13 @@ ssl_ca:  "puppet:///modules/profiles/logstash-forwarder.crt"
 #Selenium Hub Placeholder "When you provision a hub.  Change the below"
 hub:     'http://<myseleniumhub>:4444/grid/register'
 
+#DRV Environment Variables
+application_secret_key:   'secretkeyshouldberandom'
+google_analytics_api_key: 'UA-59849906-2'
+logging_config_file_path: 'logging_config.json'
+
+
+
 hosts::host_entries:
   'loginapi.integration.beta.landregistryconcept.co.uk':
     ip: '10.80.2.102'

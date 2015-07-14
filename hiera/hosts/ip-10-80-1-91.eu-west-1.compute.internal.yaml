@@ -9,5 +9,8 @@ proxy_pass:  "http://127.0.0.1:8000"
 app:           'digital-register-frontend'
 
 # Environment Variables
-pypath:      '/var/webapp/workspace/parallel_digital-register-frontend-integration-deploy'
-fault_log:     '/var/log/applications/digital-register-frontend-fault.log'
+pythonpath:         '/var/webapp/workspace/parallel_digital-register-frontend-integration-deploy'
+fault_log:          '/var/log/applications/digital-register-frontend-fault.log'
+register_title_api: 'http://digitalapi.integration2.beta.landregistryconcept.co.uk:8000/'
+login_api:          'http://loginapi.integration2.beta.landregistryconcept.co.uk:8005/'
+
