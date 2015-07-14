@@ -8,4 +8,5 @@ class roles::aws {
   include ::profiles::se_linux
   include ::profiles::monit_service
   include ::profiles::sudoers
+  include ::profiles::env_variables
 }
