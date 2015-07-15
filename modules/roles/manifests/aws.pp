@@ -10,4 +10,5 @@ class roles::aws {
   include ::profiles::monit_service
   include ::profiles::sudoers
   include ::profiles::env_variables
+  include ::profiles::drvapp
 }
