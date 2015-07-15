@@ -7,6 +7,7 @@ class profiles::env_variables {
   $APPLICATION_SECRET_KEY  = hiera('application_secret_key')
   $LOGIN_API               = hiera('login_api')
 #  $PYTHONPATH              = hiera('pythonpath')
+  $DIGITAL_REGISTER_URL    = hiera('digital_register_url')
 
   file { '/etc/profile.d/environment.sh' :
     ensure  => file,

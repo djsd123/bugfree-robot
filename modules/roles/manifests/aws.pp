@@ -1,4 +1,5 @@
 class roles::aws {
+# This role needs to be chopped up into smaller roles and named appropriately
   include ::profiles::ntp
   include ::profiles::python_tools
   include ::profiles::packages
