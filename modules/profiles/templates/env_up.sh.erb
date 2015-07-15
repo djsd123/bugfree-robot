@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cd /var/webapp/<%= @app %>
+virtualenv -p /usr/local/bin/python3.3 run_dev
+source /var/webapp/<%= @app %>/run_dev/bin/activate
+pip3 install -r /var/webapp/<%= @app %>/requirements.txt
+pip3 install gunicorn
+gunicorn service.server:app --pid=/tmp/gunicorn.pid -c gunicorn_settings.py &
+
