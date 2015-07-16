@@ -15,7 +15,7 @@ class profiles::env_variables {
   file { 'environment_app.sh' :
     ensure  => file,
     content => template('profiles/environment.sh.erb'),
-    path    => "/var/webapp/workspace/${jenkins_job}/environment_app.sh",
+    path    => "/var/webapp/environment_app.sh",
     owner   => 'webapp',
     group   => 'webapp',
   }
