@@ -21,12 +21,12 @@ class profiles::drvapp {
     mode    => 775,
   }
 
-  file { $app:
+  /*file { $app:
     ensure  => link,
     target  => "/var/webapp/workspace/${jenkins_job}",
     path    => "/var/webapp",
     owner   => 'webapp',
     group   => 'webapp',
   }
-
+*/
 }
