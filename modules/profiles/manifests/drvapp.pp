@@ -1,7 +1,8 @@
 class profiles::drvapp {
 # The implemetation of this definitely needs to be revisted and aligned with a proper packaging and deployment solution
   require profiles::users
-  $app    = hiera('app')
+  $app          = hiera('app')
+  $jenkins_job  = hiera('jenkins_job')
 
   file { '/var/webapp/env_up.sh':
     ensure  => file,
@@ -9,6 +10,23 @@ class profiles::drvapp {
     owner   => 'webapp',
     group   => 'webapp',
     mode    => 755,
+  }
+
+  file { 'project_root':
+    path    => "/var/webapp/workspace/${jenkins_job}",
+    ensure  => directory,
+    owner   => 'webapp',
+    group   => 'webapp',
+    mode    => 775,
+  }
+
+  file { $app:
+    ensure  => link,
+    target  => "/var/webapp/workspace/${jenkins_job}",
+    path    => "/var/webapp",
+    owner   => 'webapp',
+    group   => 'webapp',
+    require => File['project_root'],
   }
 
 }
