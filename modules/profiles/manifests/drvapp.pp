@@ -1,6 +1,6 @@
 class profiles::drvapp {
 # The implemetation of this definitely needs to be revisted and aligned with a proper packaging and deployment solution
-  require profiles::users
+  include profiles::users
   $app          = hiera('app')
   $jenkins_job  = hiera('jenkins_job')
 
@@ -18,7 +18,7 @@ class profiles::drvapp {
     owner   => 'webapp',
     group   => 'webapp',
     mode    => 775,
-  }
+  } ->
 
   file { $app:
     ensure  => link,
@@ -26,7 +26,6 @@ class profiles::drvapp {
     path    => "/var/webapp",
     owner   => 'webapp',
     group   => 'webapp',
-    require => File['project_root'],
   }
 
 }
