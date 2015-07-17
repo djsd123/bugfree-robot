@@ -10,11 +10,8 @@ app:           'digital-register-frontend'
 jenkins_job:   'parallel_digital-register-frontend-integration-deploy'
 
 # Environment Variables
-pythonpath:          '/var/webapp/workspace/parallel_digital-register-frontend-integration-deploy'
-fault_log_file_path: '/var/log/applications/digital-register-frontend-fault.log'
 register_title_api:  'http://digitalapi.integration2.landregistryconcept.co.uk:8000/'
 login_api:           'http://loginapi.integration2.landregistryconcept.co.uk:8000/'
-logging_config_file_path: 'logging_config.json'
 digital_register_url: 'http://digital.integration2.landregistryconcept.co.uk'
 
 

@@ -1,3 +1,6 @@
 ---
 # Logstash Forwarder
 app:           'login-api'
+jenkins_job:   'parallel_login-api-integration-deploy'
+
+sqlalchemy_database_uri: 'postgresql+pg8000://postgres:D00mBarBard@10.80.2.10:5432/user_data'

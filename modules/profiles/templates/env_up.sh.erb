@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export PORT=8000
+export PORT=<%= @PORT %>
 export DIGITAL_REGISTER_URL="<%= @DIGITAL_REGISTER_URL %>"
 cd /var/webapp/workspace/<%= @jenkins_job %>
 virtualenv -p /usr/local/bin/python3 run_dev

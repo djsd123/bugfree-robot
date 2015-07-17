@@ -3,6 +3,7 @@ class profiles::drvapp {
   include profiles::users
   $app          = hiera('app')
   $jenkins_job  = hiera('jenkins_job')
+  $PORT         = hiera('port')
 
   file { '/var/webapp/env_up.sh':
     ensure  => file,
