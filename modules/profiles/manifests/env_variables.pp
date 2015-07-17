@@ -15,6 +15,7 @@ class profiles::env_variables {
   $SQLALCHEMY_DATABASE_URI = hiera('sqlalchemy_database_uri')
   $POSTGRES_PASSWORD       = hiera('postgres_password')
   $POSTGRES_HOST           = hiera('postgres_host')
+  $POSTGRES_USER           = hiera('postgres_user')
   $ELASTIC_SEARCH_ENDPOINT = hiera('elastic_search_endpoint')
   $ELASTICSEARCH_URI       = hiera('elasticsearch_uri')
 
