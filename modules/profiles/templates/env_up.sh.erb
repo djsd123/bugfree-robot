@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 export PORT=<%= @PORT %>
 export DIGITAL_REGISTER_URL="<%= @DIGITAL_REGISTER_URL %>"
 cd /var/webapp/workspace/<%= @jenkins_job %>
@@ -8,5 +9,13 @@ source /var/webapp/workspace/<%= @jenkins_job %>/run_dev/bin/activate
 pip3.4 install -r /var/webapp/workspace/<%= @jenkins_job %>/requirements.txt
 pip3.4 install gunicorn
 source /var/webapp/environment_app.sh
+
+FILE=/var/webapp/workspace/<%= @jenkins_job %>/manage.py
+
+if [ -f $FILE ];
+then
+  python3 manage.py ${MANAGE_CONFIG} > /tmp/manage.log 2>&1
+fi
+
 gunicorn service.server:app --pid=/tmp/gunicorn.pid -c gunicorn_settings.py &
 
