@@ -7,7 +7,6 @@ class profiles::python_tools {
   $PYPGK    = "${PYTHON}.rpm"
   $PKGMAN   = 'rpm'
   $rpm_path   =  "puppet:///modules/profiles"
-  $gunicorn   =  "python3-gunicorn-18.0-1.fc20.noarch.rpm"
 
   package {
     'python-pip':
@@ -46,16 +45,4 @@ class profiles::python_tools {
     require  => File['/usr/bin/pip3'],
   }
 
-  file { $gunicorn :
-    ensure   => file,
-    path     => "/tmp/${gunicorn}",
-    source   => "${rpm_path}/${gunicorn}",
-  } ~>
-
-  package { $gunicorn :
-    provider        => rpm,
-    source          => "/tmp/${gunicorn}",
-    ensure          => installed,
-    install_options => '--nosignature',
-  }
 }
