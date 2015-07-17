@@ -24,6 +24,9 @@ login_api:                 ''
 sqlalchemy_database_uri:   ''
 max_number_search_results: '50'
 search_results_per_page:   '20'
+index_config_file_path:    ''
+polling_interval_secs:     ''
+page_size:                 ''
 
 
 

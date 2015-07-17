@@ -21,6 +21,9 @@ class profiles::env_variables {
   $ELASTICSEARCH_URI        = hiera('elasticsearch_uri')
   $MAX_NUMBER_SEARCH_RESULTS= hiera('max_number_search_results')
   $SEARCH_RESULTS_PER_PAGE  = hiera('search_results_per_page')
+  $INDEX_CONFIG_FILE_PATH   = hiera('index_config_file_path')
+  $POLLING_INTERVAL_SECS    = hiera('polling_interval_secs')
+  $PAGE_SIZE                = hiera('page_size')
 
 
 
