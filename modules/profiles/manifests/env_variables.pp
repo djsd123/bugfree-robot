@@ -5,8 +5,8 @@ class profiles::env_variables {
   $jenkins_job             = hiera('jenkins_job')
   $app                     = hiera('app')
   $REGISTER_TITLE_API      = hiera('register_title_api')
-  $LOGGING_CONFIG_FILE_PATH= "/var/log/applications/${app}-fault.log"
-  $FAULT_LOG_FILE_PATH     = hiera('fault_log_file_path')
+  $LOGGING_CONFIG_FILE_PATH= "/var/webapp/workspace/${jenkins_job}/logging_config.json"
+  $FAULT_LOG_FILE_PATH     = "/var/log/applications/${app}-fault.log"
   $GOOGLE_ANALYTICS_API_KEY= hiera('google_analytics_api_key')
   $APPLICATION_SECRET_KEY  = hiera('application_secret_key')
   $LOGIN_API               = hiera('login_api')
