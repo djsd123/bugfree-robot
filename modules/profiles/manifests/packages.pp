@@ -11,7 +11,7 @@ class profiles::packages {
    'libxml2-devel','psmisc','ruby-devel','finger','git','lsof','openssl-libs',
    'pyOpenSSL.x86_64','bzip2-devel','bzip2-libs','readline','readline-static',
    'readline-devel','python-lxml','cairo','pango','gdk-pixbuf2','libffi-devel',
-   'libxslt-devel','libxml2-devel','python-cairosvg']
+   'libxslt-devel','libxml2-devel','python-cairosvg','telnet']
 
 
 
