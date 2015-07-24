@@ -7,12 +7,12 @@ class profiles::ntp (
      class {'::ntp':
        servers  => $ntp_servers,
        package_ensure  => 'present',
-       restrict => [
+       /*restrict => [
          'default kod nomodify notrap nopeer noquery',
          '-6 default kod nomodify notrap nopeer noquery',
          '127.0.0.1',
          '-6 ::1',
-       ],
+       ],*/
      }
 
 }
